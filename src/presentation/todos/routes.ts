@@ -1,8 +1,7 @@
-import { Router } from "express";
-import { TodosController } from "./controller";
+import {Router} from 'express';
+import {TodosController} from './controller';
 
 export class TodoRoutes {
-
   static get routes(): Router {
     const router = Router();
     const todoController = new TodosController();
@@ -17,5 +16,4 @@ export class TodoRoutes {
     router.delete('/:id', todoController.deleteTodo);
     return router;
   }
-
 }
