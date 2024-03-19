@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:juancruz1324@localhost:5432/TODO"
+  url      =  env("POSTGRES_URL")
 }
 
 model todo {
